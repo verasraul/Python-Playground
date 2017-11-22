@@ -1,0 +1,40 @@
+Brief History
+-Patrick Naughton-Sun Microsystems
+-Began project Dec 1990
+-C++ alternative
+--differences: garbage clean up, runs anywhere
+-Originally Called Oak-after tree that stood outside his office
+
+What is an IDE?
+
+Popular ones
+
+How to set up JDK and Eclipse - If necessary
+
+How to create:
+-Project
+-Package
+-Class  --Quick break to show folder contents
+-Main method
+--Explain Method signature
+
+Simple Print statements
+-How to step through them using debugger
+
+Explain Java Primitives
+
+Go Through ExploreDataTypes.java
+-Declarations
+-Initializing variables
+-Assigning values
+-arithmetic
+-Stepping through with debugger to see various values at compile time
+-FUCK SHIT UP ! and see compiler/runtime messages
+
+Quick Lab: ExploreDataTypes2
+
+Plan out KilogramsToPounds
+-Input - data types
+-Output
+
+Quick Lab: KilogramsToPounds
