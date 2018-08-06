@@ -3,7 +3,7 @@ from Account import Account
 
 #TODO: Add tests
 class User():
-    Accounts = {}
+    Accounts = {} #empty dictionary to store accounts
 
     def __init__(self, name):
         self.name = name
