@@ -1,0 +1,2 @@
+This nFile has been created
+This is  NEW line in the file

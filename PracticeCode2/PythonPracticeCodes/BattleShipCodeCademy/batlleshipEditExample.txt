@@ -1,0 +1,28 @@
+>>> board = []
+>>> for x in range(0, 5):
+...     board.append(["O"] * 5)
+...
+>>> def print_board(board):
+...     for row in board:
+...         print " ".join(row)
+...
+>>> print_board(board)
+O O O O O
+O O O O O
+O O O O O
+O O O O O
+O O O O O
+>>> s = board[2]
+>>> s
+['O', 'O', 'O', 'O', 'O']
+>>> s[2] = 'X'
+>>> s
+['O', 'O', 'X', 'O', 'O']
+>>> board[2] = s
+>>> print_board(board)
+O O O O O
+O O O O O
+O O X O O
+O O O O O
+O O O O O
+>>>
