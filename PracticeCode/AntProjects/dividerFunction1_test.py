@@ -1,12 +1,7 @@
 import unittest
 from dividerFunction1 import divider
 
-# Test for dividerFunction1 pycode.
-# Test 1; func will throw an error when dividing by zero
-# Test 2; func will return a float when dividing by an Int by a float
 
-
-#divider(3,1)
 
 class TestDividerFunc(unittest.TestCase):
     def test_zero_division_error(self):
@@ -31,10 +26,6 @@ class TestDividerFunc(unittest.TestCase):
 
     # Test func with 2 integers being divided
     #
-
-
-
-
 
 
 

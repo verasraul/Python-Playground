@@ -3,11 +3,7 @@
 
 
 def divider (number1, number2):
-    # Divide number1 by number2
-    division = number1 / number2
-    return (division)
+    # Func takes 2 ints as arguments.
+    # Return the result of number1 divided by number2.
+    return (number1/ number2)
 
-
-#divider(3, 0)
-#divider(3, 1)
-#divider(3, 1.0)
