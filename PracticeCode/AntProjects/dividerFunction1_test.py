@@ -13,12 +13,25 @@ class TestDividerFunc(unittest.TestCase):
         # Make sure value errors is raised when int is divided by zero.
         self.assertRaises(ZeroDivisionError, divider, 3, 0)
 
+    # Test func with int divided by float result
     def test_float_result(self):
         # capture result of divider func
-        result = divider(3, 1.0)
+        float_result = divider(3, 1.0)
         # expected result of func
-        expected_result = 3.0
-        self.assertEqual(result, expected_result)
+        expected_float_result = 3.0
+        self.assertEqual(float_result, expected_float_result)
+
+    # Test func with float divided by float
+    def test_float_division(self):
+        # capture result of divider func
+        floatDiv_result = divider(3.0, 1.0)
+        # expected result of func
+        expected_floatDiv_result = 3.0
+        self.assertEqual(floatDiv_result, expected_floatDiv_result)
+
+    # Test func with 2 integers being divided
+    #
+
 
 
 
