@@ -1,3 +1,8 @@
+'''
+Test file for dividerFuncion1.
+
+'''
+
 import unittest
 from dividerFunction1 import divider
 
