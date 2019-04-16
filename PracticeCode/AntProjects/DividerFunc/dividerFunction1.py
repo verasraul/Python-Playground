@@ -1,3 +1,4 @@
+__author__ = 'verasraul'
 '''
 parameters = number1, number2
 accepted type = both parameters accept floats and ints
