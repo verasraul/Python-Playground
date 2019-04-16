@@ -1,5 +1,5 @@
 # PyCode
-# Location for all python projects.
+# Location for all python projects (big or small, development or productional).
 
 
 # Main Project Name: PasswordManager.
