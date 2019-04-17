@@ -1,5 +1,6 @@
+__author__ = 'verasraul'
 '''
-Test file for dividerFuncion1.
+Test file for dividerFunction1.
 
 '''
 
