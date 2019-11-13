@@ -19,38 +19,30 @@ app = Flask(__name__)
 def home():
     return jsonify({"result": "Welcome Home!"})
 
-
 @app.route("/divider", methods=['POST', 'GET'])
+def zError():
+    divisor = float(request.args.get('divisor'))
+    dividend = float(request.args.get('dividend'))
+    try:
+        return jsonify({"result": (dividerFunction1.divider(dividend, divisor))})
+    except ZeroDivisionError as e:
+        return make_response(jsonify({
+            "error": {
+                "reason": "Cannot compute",
+                "debug": "Cannot divide by zero"
+            }
+        }), 400
+        )
+
 def divider():
     checkreq = request.method
     if checkreq == 'GET':
-        divisor = float(request.args.get('divisor'))
-        dividend = float(request.args.get('dividend'))
-        try:
-            return jsonify({"result": (dividerFunction1.divider(dividend, divisor))})
-        except ZeroDivisionError:
-            return make_response(jsonify({
-                "error": {
-                    "reason": "Cannot compute",
-                    "debug": "Cannot divide by zero"
-                }
-            }), 400
-            )
+        zError(divisor=" ", dividend=" ")
+
 
     elif checkreq == 'POST':
         content = request.get_json()
-        divisor = content["divisor"]
-        dividend = content["dividend"]
-        try:
-            return jsonify({"result": (dividerFunction1.divider(dividend, divisor))})
-        except ZeroDivisionError:
-            return make_response(jsonify({
-                "error": {
-                    "reason": "Cannot compute",
-                    "debug": "Cannot divide by zero"
-                }
-            }), 400
-            )
+
 
 
 @app.route("/addition", methods=['POST'])
