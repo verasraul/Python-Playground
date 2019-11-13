@@ -48,11 +48,11 @@ def divider():
 @app.route("/addition", methods=['POST'])
 def addition():
     content = request.get_json()
-    number1 = content["number1"]
-    number2 = content["number2"]
+    number1 = float(request.args.get('number1'))
+    number2 = float(request.args.get('number2'))
     return jsonify({"result": (additionFunction1.addition(number1, number2))})
 
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='127.0.0.1', debug=True)
