@@ -11,6 +11,7 @@ from flask import Flask, jsonify, request, make_response
 # import divider and addition modules.
 import dividerFunction1
 import additionFunction1
+import subtractionFunction1
 
 app = Flask(__name__)
 
@@ -54,6 +55,14 @@ def addition():
     number1 = request.args.get('number1')
     number2 = request.args.get('number2')
     return jsonify({"result": (additionFunction1.addition(number1, number2))})
+
+
+@app.route("/subtraction", methods=['GET'])
+def subtraction():
+    content = request.get_json()
+    number1 = request.args.get('number1')
+    number2 = request.args.get('number2')
+    return jsonify({"result":(subtractionFunction1.subtractraction(number1, number2))})
 
 
 if __name__ == '__main__':
