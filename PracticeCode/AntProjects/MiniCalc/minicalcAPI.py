@@ -62,7 +62,7 @@ def subtraction():
     content = request.get_json()
     number1 = request.args.get('number1')
     number2 = request.args.get('number2')
-    return jsonify({"result":(subtractionFunction1.subtractraction(number1, number2))})
+    return jsonify({"result":(subtractionFunction1.subtraction(number1, number2))})
 
 
 if __name__ == '__main__':
