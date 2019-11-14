@@ -10,7 +10,7 @@ return type(s) = returns a float type
 def divider (dividend, divisor):
     # Takes 2 ints as arguments.
     # Return the result of dividend divided by divisor.
-    return (dividend/ divisor)
+    return (float(dividend)/ float(divisor))
 
 
 

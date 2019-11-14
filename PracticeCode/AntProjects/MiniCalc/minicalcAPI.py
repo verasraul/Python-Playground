@@ -21,8 +21,8 @@ def home():
 
 @app.route("/divider", methods=['POST', 'GET'])
 def zError():
-    divisor = float(request.args.get('divisor'))
-    dividend = float(request.args.get('dividend'))
+    divisor = request.args.get('divisor')
+    dividend = request.args.get('dividend')
     try:
         return jsonify({"result": (dividerFunction1.divider(dividend, divisor))})
     except ZeroDivisionError as e:
@@ -48,8 +48,8 @@ def divider():
 @app.route("/addition", methods=['POST'])
 def addition():
     content = request.get_json()
-    number1 = float(request.args.get('number1'))
-    number2 = float(request.args.get('number2'))
+    number1 = request.args.get('number1')
+    number2 = request.args.get('number2')
     return jsonify({"result": (additionFunction1.addition(number1, number2))})
 
 

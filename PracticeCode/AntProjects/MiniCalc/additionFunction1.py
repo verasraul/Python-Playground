@@ -9,6 +9,6 @@ return type(s) = integer (if added with ints) & floats (if added with floats)
 
 def addition (number1, number2):
     # Takes 2 ints and/or floats as arguments.
-    # Returns the result of number1 + number2.
-    return (number1 + number2)
+    # Returns the float result of number1 + number2.
+    return (float(number1) + float(number2))
 
