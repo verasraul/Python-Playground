@@ -19,13 +19,16 @@ app = Flask(__name__)
 def home():
     return jsonify({"result": "Welcome Home!"})
 
+
 @app.route("/divider", methods=['POST', 'GET'])
 def zError():
+    '''Grab argument requests from URL endpoint'''
     divisor = request.args.get('divisor')
     dividend = request.args.get('dividend')
+    # Accept ZeroDivision error and return customized error message in JSON format'''
     try:
         return jsonify({"result": (dividerFunction1.divider(dividend, divisor))})
-    except ZeroDivisionError as e:
+    except ZeroDivisionError as error:
         return make_response(jsonify({
             "error": {
                 "reason": "Cannot compute",
@@ -33,6 +36,7 @@ def zError():
             }
         }), 400
         )
+
 
 def divider():
     checkreq = request.method
@@ -44,14 +48,12 @@ def divider():
         content = request.get_json()
 
 
-
 @app.route("/addition", methods=['POST'])
 def addition():
     content = request.get_json()
     number1 = request.args.get('number1')
     number2 = request.args.get('number2')
     return jsonify({"result": (additionFunction1.addition(number1, number2))})
-
 
 
 if __name__ == '__main__':
