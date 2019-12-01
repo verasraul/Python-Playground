@@ -21,7 +21,7 @@ def main_loop():
             name = input("user name?: ")
             userManager.add_user(name)
             print("you just created a new user!!!")
-            print("user="+str(userManager.users))
+            print("user="+ userManager.get_user(name))
         elif menuSelection == "6":
             print("you chose to exit")
             remainInApp = False
