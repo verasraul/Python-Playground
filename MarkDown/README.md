@@ -8,12 +8,13 @@ This is a second parapagraph
 to show structure
 among other things
 
-#Heading1
-##Heading2
-###Heading3
-####Heading4
-#####Heading5
-######Heading6
+# Heading1
+
+## Heading2
+### Heading3
+#### Heading4
+##### Heading5
+###### Heading6
 
 >Block quotes
 span across
